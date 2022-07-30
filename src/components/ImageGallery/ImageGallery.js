@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { ImgGallery } from './ImgGallery.styles';
 import { ImageGalleryItem } from '../ImageGalleryItem/ImageGalleryItem'
 //-----------------------------------------------------------//
@@ -17,4 +18,15 @@ export const ImageGallery = ({ imageList, handlerOpenModal }) => {
       })}
     </ImgGallery>
   );
+};
+
+ImageGallery.propTypes = {
+  imageList: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      webformatURL: PropTypes.string.isRequired,
+      largeImageURL: PropTypes.string.isRequired,
+    })
+  ),
+  handlerOpenModal: PropTypes.func.isRequired,
 };

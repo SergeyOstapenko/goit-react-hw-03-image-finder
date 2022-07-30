@@ -4,7 +4,7 @@ import { Searchbar } from './Searchbar/Searchbar';
 import { ImageGallery } from './ImageGallery/ImageGallery';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
-import { RequestApi } from '../components/ServiceApi/service';
+import { RequestApi } from '../ServiceApi/service';
 import { Loader } from './Loader/Loader';
 import { Button } from './Button/Button';
 //------------------------------------------------------------//
