@@ -9,7 +9,7 @@ import {
 } from './Searchbar.styles';
 import { toast } from 'react-toastify';
 //---------------------------------------------//
- export class Searchbar extends Component {
+export class Searchbar extends Component {
   static propTypes = {
     onSubmit: PropTypes.func.isRequired,
   };
@@ -22,10 +22,10 @@ import { toast } from 'react-toastify';
     this.setState({ [name]: value });
   };
 
+
   handlerSubmit = e => {
     const { query } = this.state;
     e.preventDefault();
-
     if (!query.trim()) {
       toast.error('empty field', {
         position: 'top-right',
@@ -38,6 +38,8 @@ import { toast } from 'react-toastify';
       });
       return;
     }
+  
+    
     this.props.onSubmit(query);
     this.setState({ query: '' });
   };

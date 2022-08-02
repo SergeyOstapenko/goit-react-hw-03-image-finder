@@ -35,6 +35,9 @@ export class App extends Component {
   };
 
   handlerForm = query => {
+    if(this.state.query === query) {
+      return
+    }
     this.setState({ query });
     this.setState({ page: 1 });
     this.setState({ imageList: [] });
@@ -59,6 +62,7 @@ export class App extends Component {
           this.setState({ status: STATUS.error, error: error.message });
         });
     }
+
   }
 
   loadMore = () => {
